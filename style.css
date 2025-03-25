@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: tan;
+    color: #333;
+}
+
+header {
+    background-color: chocolate;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    background-color: sienna;
+    padding: 10px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+.menu li {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: chocolate;
+    list-style: none;
+    padding: 0;
+    min-width: 50px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 5px;
+}
+
+.dropdown-menu a {
+    color: white;
+    display: block;
+}
+
+main {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+footer {
+    background-color:tan;
+    color: black;
+    text-align: center;
+    padding: 2px;
+    margin-top: 30%;
+    position: relative;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+footer .social-links a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid chocolate;
+    border-radius: 50%;
+    font-size: 20px;
+    color:chocolate;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.menu a:hover,
+.menu a.active {
+    background-color: tan;
+}
