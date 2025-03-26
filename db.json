@@ -1,0 +1,109 @@
+{
+    "recipes": {
+      "breakfast": [
+        {
+          "id": 1,
+          "name": "Potato Sauté",
+          "description": "Crispy golden potatoes sautéed with onions and spices.",
+          "image": "assets/potato-saute.jpg"
+        },
+        {
+          "id": 2,
+          "name": "Scrambled Eggs",
+          "description": "Fluffy scrambled eggs with butter and herbs.",
+          "image": "assets/scrambled-eggs.jpg"
+        },
+        {
+          "id": 3,
+          "name": "Sweet Potatoes",
+          "description": "Boiled or roasted sweet potatoes, rich in flavor and nutrients.",
+          "image": "assets/sweet-potatoes.jpg"
+        },
+        {
+          "id": 4,
+          "name": "Sweet Tea",
+          "description": "Warm, sweet, and refreshing Kenyan-style tea.",
+          "image": "assets/sweet-tea.jpg"
+        },
+        {
+          "id": 5,
+          "name": "Irish Potatoes",
+          "description": "Steamed or fried Irish potatoes, perfect for breakfast.",
+          "image": "assets/irish-potatoes.jpg"
+        }
+      ],
+      "lunch": [
+        {
+          "id": 6,
+          "name": "Brown Ugali",
+          "description": "Traditional Kenyan brown ugali made from millet or sorghum.",
+          "image": "assets/brown-ugali.jpg"
+        },
+        {
+          "id": 7,
+          "name": "Coconut Fish",
+          "description": "Fish cooked in a creamy coconut sauce with spices.",
+          "image": "assets/coconut-fish.jpg"
+        },
+        {
+          "id": 8,
+          "name": "Wet Fried Liver",
+          "description": "Tender liver cooked in a rich tomato-based sauce.",
+          "image": "assets/wet-fried-liver.jpg"
+        },
+        {
+          "id": 9,
+          "name": "Traditional Chicken",
+          "description": "Authentic Kenyan-style chicken slow-cooked in traditional spices.",
+          "image": "assets/traditional-chicken.jpg"
+        },
+        {
+          "id": 10,
+          "name": "Deep Fried Fish",
+          "description": "Crispy golden deep-fried fish served with fresh kachumbari.",
+          "image": "assets/deep-fried-fish.jpg"
+        }
+      ],
+      "dinner": [
+        {
+          "id": 11,
+          "name": "Vegetable Rice",
+          "description": "Rice cooked with assorted vegetables and aromatic spices.",
+          "image": "assets/vegetable-rice.jpg"
+        },
+        {
+          "id": 12,
+          "name": "Carrot Chapattis",
+          "description": "Soft chapattis infused with grated carrots for extra flavor.",
+          "image": "assets/carrot-chapattis.jpg"
+        },
+        {
+          "id": 13,
+          "name": "Peanut Matoke",
+          "description": "Bananas cooked in a rich peanut sauce, a Ugandan-inspired dish.",
+          "image": "assets/peanut-matoke.jpg"
+        }
+      ],
+      "sweet-treats": [
+        {
+          "id": 14,
+          "name": "Mini Cardamom Mandazis",
+          "description": "Small, spiced mandazis with a hint of cardamom.",
+          "image": "assets/mini-cardamom-mandazis.jpg"
+        },
+        {
+          "id": 15,
+          "name": "Cookies",
+          "description": "Crunchy, homemade cookies with a soft center.",
+          "image": "assets/cookies.jpg"
+        },
+        {
+          "id": 16,
+          "name": "Cinnamon Rolls",
+          "description": "Soft, sweet rolls with a rich cinnamon filling and icing.",
+          "image": "assets/cinnamon-rolls.jpg"
+        }
+      ]
+    }
+  }
+  
