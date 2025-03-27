@@ -8,7 +8,14 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <header>Selah's Secrets</header>
+    <header>
+        <h1>Selah's Secrets</h1>
+        <div class="search-container">
+            <input type="text" id="recipe-search" placeholder="Search recipes...">
+            <button id="search-btn">Search</button>
+        </div>
+    </header>
+
     <nav>
         <ul class="menu">
             <li><a href="#" data-page="home">Home</a></li>
@@ -16,36 +23,44 @@
             <li class="dropdown">
                 <a href="#">Recipes</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#" data-page="breakfast">Breakfast</a></li>
-                    <li><a href="#" data-page="lunch">Lunch</a></li>
-                    <li><a href="#" data-page="dinner">Dinner</a></li>
-                    <li><a href="#" data-page="sweet-treats">Sweet Treats</a></li>
+                    <li><a href="#" data-page="breakfast" data-category="breakfast">Breakfast</a></li>
+                    <li><a href="#" data-page="lunch" data-category="lunch">Lunch</a></li>
+                    <li><a href="#" data-page="dinner" data-category="dinner">Dinner</a></li>
+                    <li><a href="#" data-page="sweet-treats" data-category="sweet-treats">Sweet Treats</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 
     <main id="content">
-        <h1>"</h1>
-        <h2>Welcome to Selah's Secrets!Delicious, 
-            simple-to-prepare recipes that celebrate fresh seasonal ingredients.</h2>
-        <p>Chapatti is one of the most loved Kenyan dish.</p>
+        <section id="welcome-section">
+            <h2>Delicious, Simple-to-Prepare Recipes</h2>
+            <p>Celebrating fresh seasonal ingredients from around the world</p>
 
-        <div class = background-image>
-            <img src="" alt="background">
-        </div>
+            <div class="filter-container">
+                <button id="filter-seasonal">Seasonal Recipes</button>
+                <button id="filter-quick">Quick Meals</button>
+            </div>
+
+            <div class="background-image">
+                <img src="Assets/Background.jpg" alt="Culinary background" loading="lazy">
+            </div>
+        </section>
+
+        <section id="recipes-container">
+            
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Selah's Secrets</p>
         <div class="social-links">
-            <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-tiktok'></i></a>
-            <a href="#"><i class='bx bxl-youtube'></i></a>
-            
+            <a href="#" id="instagram-link"><i class='bx bxl-instagram'></i></a>
+            <a href="#" id="tiktok-link"><i class='bx bxl-tiktok'></i></a>
+            <a href="#" id="youtube-link"><i class='bx bxl-youtube'></i></a>
         </div>
     </footer>
 
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
