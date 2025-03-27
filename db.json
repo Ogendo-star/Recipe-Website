@@ -5,92 +5,187 @@
           "id": 1,
           "name": "Potato Sauté",
           "description": "Crispy golden potatoes sautéed with onions and spices.",
-          "image": "Assets/potato saute.jpg"
+          "image": "Assets/potato saute.jpg",
+          "steps": [
+            "1.Peel and dice the potatoes.",
+            "2.Heat oil in a pan and add the potatoes.",
+            "3.Add the onions and spices.",
+            "4.Cook until the potatoes are golden brown.",
+            "5. Garnish with fresh corriander leaves and serve hot."
+          ]
         },
         {
           "id": 2,
           "name": "Scrambled Eggs",
           "description": "Fluffy scrambled eggs with butter and herbs.",
-          "image": "Assets/Eggs.jpg"
+          "image": "Assets/Eggs.jpg",
+          "steps": [
+            "1.Beat the eggs in a bowl.",
+            "2.Heat butter in a pan and add the eggs.",
+            "3.Add the herbs and spices.",
+            "4.Cook until the eggs are fluffy.",
+            "5. Serve hot with toast."
+          ]
         },
         {
           "id": 3,
           "name": "Arrow roots",
           "description": "Boiled or roasted arrow roots, rich in flavor and nutrients.",
-          "image": "Assets/arrow roots.jpg"
+          "image": "Assets/arrow roots.jpg",
+          "steps":[
+            "1. Peel the arrow roots and cut into small pieces.",
+            "2. Boil in salted water until soft.",
+            "3. Drain the water and serve hot."
+          ]
         },
         {
           "id": 4,
           "name": "Sweet Tea",
           "description": "Warm, sweet, and refreshing Kenyan-style tea.",
-          "image": "Assets/tea.jpg"
+          "image": "Assets/tea.jpg",
+          "steps": [
+            "1. Put Sugar in a pan and add little water.",
+            "2. Stir slowly on low heat until the sugar caramelizes.",
+            "3. Add tea leaves,cardamon and freshly crushed ginger.",
+            "4. Stir then add your milk and water once the aroma oozes,don't let it burn.",
+            "5. Increase heat and let it boil until ready to serve."
+          ]
         }
         
       ],
       "lunch": [
+        
+        {
+          "id": 5,
+          "name": "Coconut Fish",
+          "description": "Fish cooked in a creamy coconut sauce with spices.",
+          "image": "Assets/cocnut fish.jpg",
+          "steps":[
+            "1. Clean the fish and marinate with salt",
+            "2. Fry the fish until golden brown.",
+            "3. In a separate pan, heat the chopped onions,crushed garlic,tomatoes and rosemary.",
+            "4. Stir until the tomatoes are soft and paste like or blend it.",
+            "5. Add abit of water and coconut milk and stir.",
+            "6. Add the fish and cook until the sauce thickens.",
+            "7. Garnish with fresh corriander leaves and serve hot(brown ugali,rice or chapattis)."
+           ]
+        },
         {
           "id": 6,
-          "name": "Brown Ugali",
-          "description": "Traditional Kenyan brown ugali made from millet or sorghum.",
-          "image": "Assets/brown ugali.jpg"
+          "name": "Wet Fried Liver",
+          "description": "Tender liver cooked in a rich tomato-based sauce.",
+          "image": "assets/wet-fried-liver.jpg",
+          "steps":[
+            "1. Clean your liver with vinegar and water.",
+            "2. Drain and add into a pan with hot oil.",
+            "3. Add a tea spoon of salt and any other spices you like.",
+            "4. Fry until slightly brown.",
+            "5. Add chopped onions and tomatoes and stir.",
+            "6. Add a little water and let it simmer until the sauce thickens.",
+            "7. Garnish with fresh herbs and serve hot."
+          ]
         },
         {
           "id": 7,
-          "name": "Coconut Fish",
-          "description": "Fish cooked in a creamy coconut sauce with spices.",
-          "image": "Assets/cocnut fish.jpg"
+          "name": "Traditional Chicken",
+          "description": "Authentic Kenyan-style chicken slow-cooked in traditional spices.",
+          "image": "Assets/chicken.jpeg",
+          "steps":[
+            "1. Cut the chicken after you've charred it on a grill.",
+            "2.Clean the chicken and marinate with salt and spices.",
+            "3. Put it a pressure cooker for 10 minutes.",
+            "4. Separate the chicken from the stock and fry until slightly brown.",
+            "5.Add chopped onions, garlic,ginger and tomatoes and stir on low heat.",
+            "6. Add the chicken stock and let it simmer until the sauce thickens.",
+            "7. Garnish with fresh corriander leaves and serve hot."
+          ]
         },
         {
           "id": 8,
-          "name": "Wet Fried Liver",
-          "description": "Tender liver cooked in a rich tomato-based sauce.",
-          "image": "assets/wet-fried-liver.jpg"
-        },
-        {
-          "id": 9,
-          "name": "Traditional Chicken",
-          "description": "Authentic Kenyan-style chicken slow-cooked in traditional spices.",
-          "image": "Assets/chicken.jpeg"
-        },
-        {
-          "id": 10,
           "name": "Deep Fried Fish",
           "description": "Crispy golden deep-fried fish served with fresh kachumbari.",
-          "image": "Assets/fried fish.jpeg"
+          "image": "Assets/fried fish.jpeg",
+          "steps":[
+            "1. Clean the fish and marinate with salt and spices.",
+            "2. Fry the fish until golden brown.",
+            "3. Serve hot with kachumbari and brown ugali."
+          ]
         }
       ],
       "dinner": [
         {
-          "id": 11,
+          "id": 9,
           "name": "Vegetable Rice",
           "description": "Rice cooked with assorted vegetables and aromatic spices.",
-          "image": "Assets/vegetable rice.jpg"
+          "image": "Assets/vegetable rice.jpg",
+          "steps":[
+            "1. Wash your rice and soak for 30 minutes.",
+            "2. Let boil until ready to serve.",
+            "3. In a separate pan, heat oil and add the chopped onions, garlic and stir until golden brown.",
+            "4. Add in your slightly boiled(with sugar) carrots, peas and green beans.",
+            "5. Stir-Fry for 5-6 minutes on medium heat.",
+            "6. Add the rice in bits as you stir until well mixed.",
+            "7. Garnish with fresh corriander leaves and serve hot."
+          ]
         },
         {
-          "id": 12,
+          "id": 10,
           "name": "Carrot Chapattis",
           "description": "Soft chapattis infused with grated carrots for extra flavor.",
-          "image": "Assets/chapatties.jpg"
+          "image": "Assets/chapatties.jpg",
+          "steps":[
+            "1. Mix your flour with grated carrots and salt plus two pinches of sugar.",
+            "2. Add warm water and oil in bits knead until the dough is soft.",
+            "3. Let it rest for 30 minutes.",
+            "4. Roll out the dough and cook on a hot pan until slightly brown.",
+            "5. Serve hot with your favorite stew."
+          ]
         }
       ],
       "sweet-treats": [
         {
-          "id": 14,
+          "id": 11,
           "name": "Mini Cardamom Mandazis",
           "description": "Small, spiced mandazis with a hint of cardamom.",
-          "image": "Assets/cinnamon rolls.jpg"
+          "image": "Assets/cinnamon rolls.jpg",
+          "steps":[
+            "1. Mix your flour with baking powder,sugar,cardamon and a pinch of salt.",
+            "2. Add warm water or milk and knead until the dough is soft.",
+            "3. Let it rest through the night or 5hrs.",
+            "4. Roll out the dough and cut into small pieces.",
+            "5. Deep fry until golden brown.",
+            "6. Serve hot with sweet tea or coffee."
+          ]
         },
         {
-          "id": 15,
+          "id": 12,
           "name": "Cookies",
           "description": "Crunchy, homemade cookies with a soft center.",
-          "image": "Assets/cookies.jpg"
+          "image": "Assets/cookies.jpg",
+          "steps":[
+            "1. Mix your 2 well beat eggs with baking powder,sugar,cinnamon,vanilla essence and a pinch of salt.",
+            "2. Add flour in bits knead until the dough is soft.",
+            "3. Let it rest for 30 minutes.",
+            "4. Let the oven heat at 180 degrees.",
+            "5. Roll out the dough and cut into small pieces.",
+            "6. Bake until golden brown for 25 minutes and 180 degrees.",
+            "7. Serve hot with sweet tea or coffee."
+          ]
         },
         {
-          "id": 16,
+          "id": 13,
           "name": "Cinnamon Rolls",
           "description": "Soft, sweet rolls with a rich cinnamon filling and icing.",
-          "image": "Assets/cinnamon rolls.jpg"
+          "image": "Assets/cinnamon rolls.jpg",
+          "steps":[
+            "1. Mix your flour with baking powder,sugar,cinnamon and a pinch of salt.",
+            "2. Add warm water or milk and knead until the dough is soft.",
+            "3. Let it rest for 30 minutes.",
+            "4. Roll out the dough and spread the cinnamon filling.",
+            "5. Roll the dough and cut into small pieces.",
+            "6. Bake until golden brown for 50 minutes and 180 degrees.",
+            "7. Serve hot with sweet tea or coffee."
+          ]
         }
       ]
     }
