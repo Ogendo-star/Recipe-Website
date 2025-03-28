@@ -5,8 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoryButtons = document.querySelectorAll('.category-btn');
     const recipeDetails = document.getElementById('recipe-details');
     const closeRecipeDetails = document.querySelector('.close-recipe-details');
-
-
+    
     let allRecipes = [];
     
     async function fetchRecipes() {
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             recipesContainer.appendChild(recipeCard);
         });
-
+        
         document.querySelectorAll('.view-btn').forEach(button => {
             button.addEventListener('click', function() {
                 const recipeId = parseInt(this.getAttribute('data-id'));
@@ -97,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const filtered = allRecipes.filter(recipe => recipe.category === category);
         displayRecipes(filtered);
     }
-
+    
     searchButton.addEventListener('click', filterBySearch);
     searchInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') filterBySearch();
@@ -126,16 +125,3 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.category-btn[data-category="all"]').classList.add('active');
     fetchRecipes();
 });
-    
-
-
-
-
-
-
-
-   
-
-
-
-
