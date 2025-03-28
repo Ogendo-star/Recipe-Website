@@ -3,56 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Selah's Secrets</title>
+    <title>My Recipe App</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
-        <h1>Selah's Secrets</h1>
-        <div class="search-container">
-            <input type="text" id="recipe-search" placeholder="Search recipes...">
-            <button id="search-btn">Search</button>
+        <h1>Selah's Secrets!</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search recipes...">
+            <button id="search-button">Search</button>
         </div>
     </header>
 
     <nav>
-        <ul class="menu">
-            <li><a href="#" data-page="home">Home</a></li>
-            <li><a href="#" data-page="about">About</a></li>
-            <li class="dropdown">
-                <a href="#">Recipes</a>
-                <ul class="dropdown-menu">
-                    <li><a href="#" data-page="breakfast" data-category="breakfast">Breakfast</a></li>
-                    <li><a href="#" data-page="lunch" data-category="lunch">Lunch</a></li>
-                    <li><a href="#" data-page="dinner" data-category="dinner">Dinner</a></li>
-                    <li><a href="#" data-page="sweet-treats" data-category="sweet-treats">Sweet Treats</a></li>
-                </ul>
-            </li>
+        <ul class="categories">
+            <li><button class="category-btn" data-category="all">All Recipes</button></li>
+            <li><button class="category-btn" data-category="breakfast">Breakfast</button></li>
+            <li><button class="category-btn" data-category="lunch">Lunch</button></li>
+            <li><button class="category-btn" data-category="dinner">Dinner</button></li>
+            <li><button class="category-btn" data-category="sweet-treats">Sweet Treats</button></li>
         </ul>
     </nav>
 
-    <div class="background-image"></div>
-    <main id="content">
-        <section id="welcome-section">
-            <h2>Delicious, Simple-to-Prepare Recipes</h2>
-            <p>Celebrating fresh seasonal ingredients from around the world</p>
-    
-            <div class="filter-container">
-                <button id="filter-seasonal">Seasonal Recipes</button>
-                <button id="filter-quick">Quick Meals</button>
-            </div>
-        </section>
+    <main>
+        <div id="recipes-container"></div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Selah's Secrets</p>
-        <div class="social-links">
-            <a href="#" id="instagram-link"><i class='bx bxl-instagram'></i></a>
-            <a href="#" id="tiktok-link"><i class='bx bxl-tiktok'></i></a>
-            <a href="#" id="youtube-link"><i class='bx bxl-youtube'></i></a>
+    <div id="recipe-details" class="recipe-details-overlay">
+        <div class="recipe-details-content">
+            <span class="close-recipe-details">&times;</span>
+            <h2 id="recipe-details-title"></h2>
+            <img id="recipe-details-image" src="" alt="">
+            <h3>How to Make:</h3>
+            <ol id="recipe-details-steps"></ol>
         </div>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
