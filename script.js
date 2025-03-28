@@ -1,4 +1,3 @@
-// Global state and configuration
 const APP_STATE = {
     recipes: [],
     filteredRecipes: [],
@@ -6,15 +5,13 @@ const APP_STATE = {
 };
 
 const API_CONFIG = {
-    baseUrl: 'https://www.themealdb.com/api/json/v1/1',
+    baseUrl: 'http://localhost:3000/',
     endpoints: {
-        searchMeals: '/search.php?s=',
-        filterByCategory: '/filter.php?c='
+        searchMeals: 'recipes?search=',
     }
 };
 
 const utils = {
-    
     async fetchData(url) {
         try {
             const response = await fetch(url);
@@ -24,45 +21,45 @@ const utils = {
             return await response.json();
         } catch (error) {
             console.error('Fetch error:', error);
-            this.displayErrorMessage('Unable to fetch recipes. Please try again.');
+            utils.displayErrorMessage('Unable to fetch recipes. Please try again.');
             return null;
         }
     },
 
-   
     displayErrorMessage(message) {
+        const contentContainer = document.getElementById('content') || document.body;
         const errorContainer = document.createElement('div');
         errorContainer.classList.add('error-message');
         errorContainer.textContent = message;
-        document.getElementById('content').prepend(errorContainer);
+        contentContainer.prepend(errorContainer);
     },
 
-    
     sanitizeRecipeData(rawData) {
         return rawData.map(recipe => ({
-            id: recipe.idMeal,
-            name: recipe.strMeal,
-            category: recipe.strCategory,
-            thumbnail: recipe.strMealThumb,
-            instructions: recipe.strInstructions
+            id: recipe.id,
+            name: recipe.name,
+            category: recipe.category,
+            thumbnail: recipe.thumbnail,
+            steps: recipe.steps,
         }));
     }
 };
 
-
 const recipeManager = {
-    
     async initializeRecipes() {
-        const data = await utils.fetchData(`${API_CONFIG.baseUrl}${API_CONFIG.endpoints.searchMeals}chicken`);
-        if (data && data.meals) {
-            APP_STATE.recipes = utils.sanitizeRecipeData(data.meals);
+        const url = `${API_CONFIG.baseUrl}recipes`;
+        const data = await utils.fetchData(url);
+        
+        if (data) {
+            APP_STATE.recipes = utils.sanitizeRecipeData(data);
             this.renderRecipes(APP_STATE.recipes);
         }
     },
 
-
     renderRecipes(recipes) {
         const recipesContainer = document.getElementById('recipes-container');
+        if (!recipesContainer) return;
+
         recipesContainer.innerHTML = ''; 
 
         recipes.forEach(recipe => {
@@ -71,7 +68,7 @@ const recipeManager = {
             recipeCard.innerHTML = `
                 <img src="${recipe.thumbnail}" alt="${recipe.name}" class="recipe-img">
                 <h3>${recipe.name}</h3>
-                <p>Category: ${recipe.category}</p>
+                <p>Category: ${recipe.category || 'Unknown'}</p>
                 <button class="view-recipe" data-id="${recipe.id}">View Recipe</button>
             `;
             recipesContainer.appendChild(recipeCard);
@@ -80,18 +77,18 @@ const recipeManager = {
 
     filterRecipesByCategory(category) {
         const filtered = APP_STATE.recipes.filter(recipe => 
-            recipe.category.toLowerCase() === category.toLowerCase()
+            recipe.category?.toLowerCase() === category.toLowerCase()
         );
         this.renderRecipes(filtered);
     }
 };
 
-
 const eventListeners = {
-    
     initSearchListener() {
         const searchInput = document.getElementById('recipe-search');
         const searchBtn = document.getElementById('search-btn');
+
+        if (!searchInput || !searchBtn) return;
 
         searchBtn.addEventListener('click', () => {
             const searchTerm = searchInput.value.trim();
@@ -106,69 +103,24 @@ const eventListeners = {
         });
     },
 
-    
     async performSearch(searchTerm) {
         if (!searchTerm) return;
 
-        const data = await utils.fetchData(`${API_CONFIG.baseUrl}${API_CONFIG.endpoints.searchMeals}${searchTerm}`);
-        if (data && data.meals) {
-            const searchResults = utils.sanitizeRecipeData(data.meals);
+        const url = `${API_CONFIG.baseUrl}recipes`;
+        const data = await utils.fetchData(url);
+        
+        if (data) {
+            const searchResults = data.filter(recipe => 
+                recipe.name.toLowerCase().includes(searchTerm.toLowerCase())
+            );
             recipeManager.renderRecipes(searchResults);
         } else {
             utils.displayErrorMessage('No recipes found.');
         }
     },
 
-    
-    initCategoryListeners() {
-        const categoryLinks = document.querySelectorAll('[data-category]');
-        categoryLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const category = e.target.dataset.category;
-                recipeManager.filterRecipesByCategory(category);
-            });
-        });
-    },
-
-    
-    initSpecialtyFilters() {
-        const seasonalBtn = document.getElementById('filter-seasonal');
-        const quickMealsBtn = document.getElementById('filter-quick');
-
-        seasonalBtn.addEventListener('click', () => {
-            
-            const seasonalRecipes = APP_STATE.recipes.filter(recipe => 
-                recipe.name.toLowerCase().includes('seasonal')
-            );
-            recipeManager.renderRecipes(seasonalRecipes);
-        });
-
-        quickMealsBtn.addEventListener('click', () => {
-            const quickRecipes = APP_STATE.recipes.filter(recipe => 
-                recipe.name.length < 20 // 
-            );
-            recipeManager.renderRecipes(quickRecipes);
-        });
-    },
-
-    
-    initSocialMediaTracking() {
-        const socialLinks = document.querySelectorAll('.social-links a');
-        socialLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                const platformId = e.currentTarget.id;
-                console.log(`Social media link clicked: ${platformId}`);
-                
-            });
-        });
-    },
-
     init() {
         this.initSearchListener();
-        this.initCategoryListeners();
-        this.initSpecialtyFilters();
-        this.initSocialMediaTracking();
     }
 };
 
@@ -176,6 +128,5 @@ async function initializeApp() {
     await recipeManager.initializeRecipes();
     eventListeners.init();
 }
-
 
 document.addEventListener('DOMContentLoaded', initializeApp);
