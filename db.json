@@ -5,7 +5,7 @@
       "name": "Potato Sauté",
       "category": "breakfast",
       "description": "Crispy golden potatoes sautéed with onions and spices.",
-      "image": "Assets/potato_saute.jpg",
+      "image": "Assets/potato saute.jpg",
       "steps": [
         "Peel and dice the potatoes.",
         "Heat oil in a pan and add the potatoes.",
@@ -19,7 +19,7 @@
       "name": "Scrambled Eggs",
       "category": "breakfast",
       "description": "Fluffy scrambled eggs with butter and herbs.",
-      "image": "Assets/eggs.jpg",
+      "image": "Assets/Eggs.jpg",
       "steps": [
         "Beat the eggs in a bowl.",
         "Heat butter in a pan and add the eggs.",
@@ -149,7 +149,7 @@
       "name": "Mini Cardamom Mandazis",
       "category": "sweet-treats",
       "description": "Small, spiced mandazis with a hint of cardamom.",
-      "image": "Assets/mini_mandazis.jpg",
+      "image": "Assets/MIni-mandazis.jpg",
       "steps": [
         "Mix flour with baking powder, sugar, cardamom, and a pinch of salt.",
         "Add warm water or milk and knead until the dough is soft.",
@@ -172,6 +172,23 @@
         "Preheat the oven to 180°C.",
         "Roll out the dough and cut into small pieces.",
         "Bake for 25 minutes until golden brown.",
+        "Serve hot with sweet tea or coffee."
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Cinnamon rolls",
+      "category": "sweet-treats",
+      "description": "soft, homemade cinnamon rolls with a soft center and crunchy top.",
+      "image": "Assets/cinnamon rolls.jpg",
+      "steps": [
+        "Mix your baking powder, sugar, cinnamon, vanilla essence, and a pinch of salt.",
+        "Add flour in bits, kneading until the dough is soft.",
+        "Let it rest for 30 minutes.",
+        "Apply the mixed cinnamon spice on the rolled-out dough.",
+        "Preheat the oven to 180°C for 10minutes.",
+        "Roll out the dough and cut into small pieces.",
+        "Bake for 50minutes until golden brown.",
         "Serve hot with sweet tea or coffee."
       ]
     }
