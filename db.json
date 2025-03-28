@@ -107,7 +107,7 @@
       "name": "Deep Fried Fish",
       "category": "lunch",
       "description": "Crispy golden deep-fried fish served with fresh kachumbari.",
-      "image": "Assets/fried_fish.jpeg",
+      "image": "Assets/fried fish.jpeg",
       "steps": [
         "Clean the fish and marinate with salt and spices.",
         "Fry the fish until golden brown.",
@@ -119,7 +119,7 @@
       "name": "Vegetable Rice",
       "category": "dinner",
       "description": "Rice cooked with assorted vegetables and aromatic spices.",
-      "image": "Assets/vegetable_rice.jpg",
+      "image": "Assets/vegetable rice.jpg",
       "steps": [
         "Wash your rice and soak for 30 minutes.",
         "Boil until ready to serve.",
