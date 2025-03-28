@@ -44,7 +44,68 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             recipesContainer.appendChild(recipeCard);
         });
-   } });
+
+        document.querySelectorAll('.view-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const recipeId = parseInt(this.getAttribute('data-id'));
+                showRecipeDetails(recipeId);
+            });
+        });
+    }
+    
+    function showRecipeDetails(recipeId) {
+        const recipe = allRecipes.find(r => r.id === recipeId);
+        if (!recipe) return;
+        
+        document.getElementById('recipe-details-title').textContent = recipe.name;
+        document.getElementById('recipe-details-image').src = recipe.image;
+        document.getElementById('recipe-details-image').alt = recipe.name;
+        
+        const stepsList = document.getElementById('recipe-details-steps');
+        stepsList.innerHTML = '';
+        recipe.steps.forEach(step => {
+            const li = document.createElement('li');
+            li.textContent = step;
+            stepsList.appendChild(li);
+        });
+        
+        recipeDetails.style.display = 'block';
+    }
+    
+    function filterBySearch() {
+        const searchTerm = searchInput.value.toLowerCase();
+        if (!searchTerm) {
+            displayRecipes(allRecipes);
+            return;
+        }
+        
+        const filtered = allRecipes.filter(recipe => 
+            recipe.name.toLowerCase().includes(searchTerm) || 
+            recipe.description.toLowerCase().includes(searchTerm) ||
+            recipe.category.toLowerCase().includes(searchTerm)
+        );
+        
+        displayRecipes(filtered);
+    }
+    
+    function filterByCategory(category) {
+        if (category === 'all') {
+            displayRecipes(allRecipes);
+            return;
+        }
+        
+        const filtered = allRecipes.filter(recipe => recipe.category === category);
+        displayRecipes(filtered);
+    }
+    
+
+
+
+
+
+
+
+   });
 
 
 
