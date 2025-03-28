@@ -97,6 +97,35 @@ document.addEventListener('DOMContentLoaded', function() {
         const filtered = allRecipes.filter(recipe => recipe.category === category);
         displayRecipes(filtered);
     }
+
+    searchButton.addEventListener('click', filterBySearch);
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') filterBySearch();
+    });
+    
+    categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            categoryButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const category = this.getAttribute('data-category');
+            filterByCategory(category);
+        });
+    });
+    
+    closeRecipeDetails.addEventListener('click', function() {
+        recipeDetails.style.display = 'none';
+    });
+    
+    window.addEventListener('click', function(e) {
+        if (e.target === recipeDetails) {
+            recipeDetails.style.display = 'none';
+        }
+    });
+    
+    
+    document.querySelector('.category-btn[data-category="all"]').classList.add('active');
+    fetchRecipes();
+});
     
 
 
@@ -105,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-   });
+   
 
 
 
