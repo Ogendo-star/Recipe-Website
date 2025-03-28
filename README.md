@@ -1,5 +1,5 @@
 
- SELAH'S SECRETS
+SELAH'S SECRETS
      Overview
 SELAH'S SECRETS is a dynamic web application that allows users to browse, search, and view detailed recipes with an intuitive and user-friendly interface.
 Features
